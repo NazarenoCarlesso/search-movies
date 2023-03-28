@@ -1,6 +1,9 @@
 import React from 'react'
+import { useFavorites } from '../hooks/useFavorites'
 
 export function ListOfMovies ({ movies }) {
+  const { addToFavorites } = useFavorites()
+
   return (
     <ul className='movies'>
       {movies.map(movie => (
@@ -8,6 +11,7 @@ export function ListOfMovies ({ movies }) {
           <h3>{movie.title}</h3>
           <p>{movie.year}</p>
           <img src={movie.poster} alt={`${movie.title} Poster`} />
+          <button onClick={() => addToFavorites(movie)}>Add to favorites</button>
         </li>
       ))}
     </ul>

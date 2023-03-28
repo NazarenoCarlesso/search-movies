@@ -2,6 +2,16 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 form {
@@ -19,7 +29,7 @@ form {
 
 .movies {
     display: grid;
-    width: 100%;
+    max-width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 32px;
 }
@@ -40,4 +50,10 @@ form {
 
 .movie img {
     border-radius: 8px;
+}
+
+.showcase {
+    font-family: serif;
+    letter-spacing: 4px;
+    margin: 6px 30px;
 }
