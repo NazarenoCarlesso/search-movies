@@ -1,4 +1,5 @@
 import { createContext, useReducer } from 'react'
+import mock from '../mocks/favorites.json'
 
 // 1. Crear el contexto
 export const FavoritesContext = createContext()
@@ -8,7 +9,7 @@ export const updateLocalStorage = state => {
   window.localStorage.setItem('favorites', JSON.stringify(state))
 }
 
-const initialState = JSON.parse(window.localStorage.getItem('favorites')) || []
+const initialState = JSON.parse(window.localStorage.getItem('favorites')) || mock.favorites
 const favoritesReducer = (state, { type, payload }) => {
   switch (type) {
     case 'ADD_TO_FAVORITES': {

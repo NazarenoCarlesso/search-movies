@@ -47,7 +47,7 @@ function App () {
           <div style={{ flexGrow: 1 }} />
           <form className='form' onSubmit={handleSubmit}>
             <input
-              style={{ border: '1px solid transparent', borderColor: error ? 'red' : 'transparent' }}
+              style={{ border: '1px solid transparent', borderColor: error ? 'red' : 'transparent', width: 230 }}
               value={search} onChange={handleChange} placeholder='Avengers, Star Wars, The matrix...'
             />
             <input type='checkbox' onChange={handleSort} checked={sort} />
@@ -56,15 +56,15 @@ function App () {
           {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
         </nav>
       </header>
-      <div style={{ minHeight: 70 }} />
+      <div style={{ minHeight: 60 }} />
       <main>
-        <h1>Search</h1>
+        <h1 className='title'>Search</h1>
         <div className='catalog'>
           {
             loading ? <div className='loader' /> : <Movies movies={movies} />
           }
         </div>
-        <h1>Trending</h1>
+        <h1 className='title'>Trending</h1>
         <div className='catalog'>
           <section>
             <img src='https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg' alt='Blade Runner 2020' />
@@ -75,11 +75,14 @@ function App () {
             <img src='https://m.media-amazon.com/images/M/MV5BNzU1MDI1NDM1NF5BMl5BanBnXkFtZTcwMzU5OTkyMQ@@._V1_SX300.jpg' alt='Land of the Dead' />
           </section>
         </div>
-        <h1>Favorites</h1>
+        <h1 className='title'>Favorites</h1>
         <div className='catalog'>
           <Movies movies={favorites} />
         </div>
       </main>
+      <footer>
+        <span>{'<>'} Nazareno Carlesso</span>
+      </footer>
     </div>
   )
 }

@@ -26,6 +26,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #212529;
 }
 
 .movies {
@@ -33,15 +34,22 @@ form {
     max-width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 32px;
+    margin: 0;
+    padding: 0px 10px;
 }
 
 .movie {
     text-align: center;
+    display: block;
+    color: #212529;
 }
 
 .movie h3 {
     padding: 0px;
     margin-bottom: -10px;
+    color: #212529;
+    max-height: 50px;
+    overflow-y: hidden;
 }
 
 .movie p {
@@ -51,6 +59,7 @@ form {
 
 .movie img {
     border-radius: 8px;
+    height: 356px;
 }
 
 .showcase {
@@ -83,7 +92,7 @@ form {
 .loader::after {
     width: 85%;
     height: 85%;
-    background: #202b38;
+    background: #f9f9f9;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -107,6 +116,7 @@ section {
     display: flex;
     width: 900px;
     height: 430px;
+    background-color: #212529;
 }
 
 section img {
@@ -118,8 +128,29 @@ section img {
 }
 
 section img:hover {
-    cursor: crosshair;
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
+}
+
+.title {
+    margin: 10px 40px;
+    color: #212529;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 110px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }

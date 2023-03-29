@@ -1,0 +1,34 @@
+{
+    "favorites": [
+        {
+            "id": "tt0409847",
+            "title": "Cowboys & Aliens",
+            "year": "2011",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMTM1MzkyNzQ3OV5BMl5BanBnXkFtZTcwMDk1NTg2NQ@@._V1_SX300.jpg"
+        },
+        {
+            "id": "tt4425200",
+            "title": "John Wick: Chapter 2",
+            "year": "2017",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SX300.jpg"
+        },
+        {
+            "id": "tt2015381",
+            "title": "Guardians of the Galaxy",
+            "year": "2014",
+            "poster": "https://m.media-amazon.com/images/M/MV5BZTkwZjU3MTctMGExMi00YjU5LTgwMDMtOWNkZDRlZjQ4NmZhXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg"
+        },
+        {
+            "id": "tt0363547",
+            "title": "Dawn of the Dead",
+            "year": "2004",
+            "poster": "https://m.media-amazon.com/images/M/MV5BN2M2ZmU2OGQtNmU5Yi00MTIyLTgwNWMtYjljMzZlYTdiNjBhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "id": "tt0406375",
+            "title": "Zathura: A Space Adventure",
+            "year": "2005",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMDc1NzM1OTgtOGYxMS00ZWE1LWEzZWMtNWEyOTI2NDJjOTU2XkEyXkFqcGdeQXVyNjQzNzA2NjM@._V1_SX300.jpg"
+        }
+    ]
+}

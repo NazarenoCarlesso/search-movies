@@ -8,8 +8,10 @@ export function ListOfMovies ({ movies }) {
     <ul className='movies'>
       {movies.map(movie => (
         <li className='movie' key={movie.id}>
-          <h3>{movie.title}</h3>
-          <p>{movie.year}</p>
+          <div className='top'>
+            <h3>{movie.title}</h3>
+            <p>{movie.year}</p>
+          </div>
           <img src={movie.poster} alt={`${movie.title} Poster`} />
           <button onClick={() => addToFavorites(movie)}>Add to favorites</button>
         </li>
@@ -20,7 +22,7 @@ export function ListOfMovies ({ movies }) {
 
 export function NoMovies () {
   return (
-    <p>No se encontraron películas para esta búsqueda</p>
+    <p style={{ fontSize: '1.3rem' }}>No se encontraron películas para esta búsqueda</p>
   )
 }
 
