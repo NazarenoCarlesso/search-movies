@@ -40,8 +40,10 @@ form {
 
 .movie {
     text-align: center;
-    display: block;
+    display: flex;
     color: #212529;
+    flex-direction: column;
+    align-items: center;
 }
 
 .movie h3 {
@@ -86,7 +88,7 @@ form {
 .loader::before {
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(254,255,0,1) 0%, rgba(255,0,0,1) 100%);
+    background: linear-gradient(150deg, rgba(236,255,0,1) 0%, rgba(0,255,25,1) 50%, rgba(0,255,196,1) 100%);
 }
 
 .loader::after {
@@ -153,4 +155,50 @@ footer {
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 20px 0px;
+}
+
+button {
+    border: 0;
+    background: linear-gradient(150deg, rgba(236,255,0,1) 0%, rgba(0,255,25,1) 50%, rgba(0,255,196,1) 100%);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+    padding: 4px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+button span {
+    background: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+    padding: 6px 20px;
+}
+
+button:hover {
+    background: linear-gradient(150deg, rgba(236,255,0,1) 0%, rgba(0,255,25,1) 50%, rgba(0,255,196,1) 100%);;
+}
+
+button:hover span {
+    background: none;
+    color: #111;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgba(0,255,25,1);
+    text-decoration: none;
 }

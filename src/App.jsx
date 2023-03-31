@@ -45,15 +45,15 @@ function App () {
         <nav>
           <h1 className='showcase'>SHOWCASE</h1>
           <div style={{ flexGrow: 1 }} />
+          {error && <p style={{ marginRight: '6px', color: 'red', textAlign: 'center' }}>{error}</p>}
           <form className='form' onSubmit={handleSubmit}>
             <input
               style={{ border: '1px solid transparent', borderColor: error ? 'red' : 'transparent', width: 230 }}
               value={search} onChange={handleChange} placeholder='Avengers, Star Wars, The matrix...'
             />
             <input type='checkbox' onChange={handleSort} checked={sort} />
-            <button type='submit'>Buscar</button>
+            <button type='submit'><span>Buscar</span></button>
           </form>
-          {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
         </nav>
       </header>
       <div style={{ minHeight: 60 }} />
@@ -81,7 +81,9 @@ function App () {
         </div>
       </main>
       <footer>
-        <span>{'<>'} Nazareno Carlesso</span>
+        <span>
+          <b>{'<>'}</b> by <a target='_blank' rel='noreferrer' href='https://github.com/NazarenoCarlesso'>Nazareno Carlesso</a> 2023
+        </span>
       </footer>
     </div>
   )

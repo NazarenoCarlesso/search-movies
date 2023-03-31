@@ -2,7 +2,7 @@ import React from 'react'
 import { useFavorites } from '../hooks/useFavorites'
 
 export function ListOfMovies ({ movies }) {
-  const { addToFavorites } = useFavorites()
+  const { favorites, addToFavorites, removeFromFavorites } = useFavorites()
 
   return (
     <ul className='movies'>
@@ -13,7 +13,17 @@ export function ListOfMovies ({ movies }) {
             <p>{movie.year}</p>
           </div>
           <img src={movie.poster} alt={`${movie.title} Poster`} />
-          <button onClick={() => addToFavorites(movie)}>Add to favorites</button>
+          {
+            favorites.some(favorite => favorite.id === movie.id)
+              ? (
+                <button onClick={() => removeFromFavorites(movie)}>
+                  <span>Remove from favorites</span>
+                </button>)
+              : (
+                <button onClick={() => addToFavorites(movie)}>
+                  <span>Add to favorites</span>
+                </button>)
+          }
         </li>
       ))}
     </ul>

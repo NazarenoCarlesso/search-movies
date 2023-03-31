@@ -22,13 +22,13 @@ const favoritesReducer = (state, { type, payload }) => {
       updateLocalStorage(newState)
       return newState
     }
-    case 'REMOVE_FROM_CART': {
+    case 'REMOVE_FROM_FAVORITES': {
       const newState = state.filter(movie => movie.id !== payload.id)
       updateLocalStorage(newState)
 
       return newState
     }
-    case 'CLEAR_CART': {
+    case 'CLEAR_FAVORITES': {
       updateLocalStorage([])
       return []
     }
